@@ -162,3 +162,56 @@ lib/
 
 - GitHub Issues: [https://github.com/xiaoyaocz/dart_simple_live/issues](https://github.com/xiaoyaocz/dart_simple_live/issues)
 - 项目主页: [https://github.com/xiaoyaocz/dart_simple_live](https://github.com/xiaoyaocz/dart_simple_live)
+
+## 优化建议
+
+### 1. LiveRoomController优化建议
+
+#### 内存泄漏风险
+- 在`LiveRoomController`中使用了`WidgetsBinding.instance.addPostFrameCallback`，但没有保存回调引用，这可能导致在某些情况下无法正确清理。建议保存回调引用以便在适当时候取消。
+
+#### 代码重复
+- `LiveRoomController`中有大量重复的UI控制代码，特别是在各种设置面板的显示方法中（如`showDanmuSettingsSheet`、`showQualitySheet`等）。这些方法可以重构为更通用的方法以减少代码重复。
+
+#### 错误处理改进
+- 在`loadData`方法中，错误处理可以通过更具体的异常类型来改善用户体验。
+
+### 2. HomeController优化建议
+
+#### 状态管理优化
+- `HomeController`中的`refreshOrScrollTop`方法可以进一步优化，避免不必要的类型转换。
+
+### 3. FollowUserController优化建议
+
+#### 数据一致性问题
+- 在`FollowUserController`中，`setItemTag`方法中存在潜在的数据一致性问题。当更新标签时，需要确保数据库操作和内存操作保持一致。
+
+#### 性能优化
+- 在`removeTag`方法中，对于每个关注用户都执行单独的数据库更新操作，这可能会导致性能问题。可以考虑批量更新操作以提高性能。
+
+### 4. SearchController优化建议
+
+#### 注释代码清理
+- `AppSearchController`中有一些被注释掉的代码（如抖音相关的特殊处理），这些代码应该被清理或恢复，以提高代码可读性。
+
+### 5. 设置模块优化建议
+
+#### UI组件复用
+- 在`DanmuSettingsView`中，有很多相似的设置项，可以创建更通用的设置组件来减少代码重复。
+
+#### 硬编码字符串
+- 在字体粗细的显示值中使用了硬编码的字符串数组，这些应该提取为常量以提高维护性。
+
+### 6. 通用优化建议
+
+#### 内存管理
+- 确保所有监听器和回调都能正确清理，防止内存泄漏。
+
+#### 代码复用
+- 减少重复代码，提高组件复用性，使代码更加简洁易维护。
+
+#### 性能优化
+- 批量处理数据库操作，避免频繁的单条更新，提高应用性能。
+
+#### 代码清理
+- 移除无用的注释代码，提高代码可读性和维护性。
