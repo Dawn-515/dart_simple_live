@@ -1,4 +1,4 @@
-package com.dawn
+package com.dawn.simplelive
 
 import io.flutter.embedding.android.FlutterActivity
 
