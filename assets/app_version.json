@@ -1,5 +1,5 @@
 {
-    "version": "v1.11.1",
-    "version_desc": "基于原仓库 v1.11.1 版本\n- 修改包名为 com.dawn\n- 通过 GitHub Actions 自动编译\n- 支持 Android APK、iOS、Windows、Linux、macOS 多平台",
+    "version": "vfork1.1.0",
+    "version_desc": "## 🎉 Fork 版本更新\n\n### 📦 基于上游 v1.11.1 版本\n\n### ✨ 本次更新\n\n#### 📝 文档完善\n- 完善所有子项目 README 文档\n- 添加 FVM 使用指南和环境配置说明\n- 添加快速开始、功能特性、架构设计等章节\n- 统一文档风格，提供完整的开发和使用指南\n\n#### 🔧 项目优化\n- 修改包名为 `com.dawn.simplelive`\n- 从 Git 跟踪中移除 Flutter 自动生成的插件注册文件\n- 完善 `.gitignore` 配置，避免误提交自动生成文件\n- 更新依赖锁定文件 (`pubspec.lock`)\n\n#### 🚀 持续集成\n- 通过 GitHub Actions 自动编译\n- 支持 Android APK、Windows、Linux 多平台自动构建\n- 自动发布 Release 版本\n\n### 📱 支持平台\n- ✅ Android (arm64-v8a, armeabi-v7a, x86_64)\n- ✅ Windows (MSIX, ZIP)\n- ✅ Linux (DEB, ZIP)\n\n### 📖 文档亮点\n- 详细的 FVM 配置和使用说明\n- 各子项目独立的完整文档\n- 清晰的架构设计和项目结构说明\n- 常见问题 FAQ 和贡献指南\n\n---\n\n**注意**: 本项目为 fork 版本，仅用于学习交流，严禁用于商业目的。",
     "prerelease": false
 }
