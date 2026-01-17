@@ -3,3 +3,10 @@ simple_live_tv_app/.vscode/settings.json
 
 # macOS Spotlight Search index file
 *.DS_Store
+
+# Keystore files - DO NOT commit these!
+keystore.jks
+keystore.jks.b64
+keystore_base64_clean.txt
+*.keystore
+*.jks
