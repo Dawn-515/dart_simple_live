@@ -1,0 +1,5 @@
+{
+    "version": "vfork1.0.0",
+    "version_desc": "首次自动构建版本\n- 通过 GitHub Actions 自动编译\n- 支持 Android APK、iOS、Windows、Linux、macOS 多平台",
+    "prerelease": false
+}
