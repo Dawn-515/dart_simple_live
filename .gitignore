@@ -10,3 +10,6 @@ keystore.jks.b64
 keystore_base64_clean.txt
 *.keystore
 *.jks
+
+# IntelliJ IDEA project files
+.idea
